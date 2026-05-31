@@ -33,31 +33,3 @@ export async function fetchBookById(id: string) {
     return null;
   }
 }
-
-// export async function fetchNotesByBook(bookId: string) {
-//   try {
-//     const response = await contentfulClient.getEntries({
-//       content_type: 'note',
-//       'fields.book.sys.id': bookId,
-//       order: '-sys.createdAt',
-//     });
-//     return response.items;
-//   } catch (error) {
-//     console.error('Error fetching notes:', error);
-//     return [];
-//   }
-// }
-
-// export async function fetchQuotesByBook(bookId: string) {
-//   try {
-//     const response = await contentfulClient.getEntries({
-//       content_type: 'quote',
-//       'fields.book.sys.id': bookId,
-//       order: '-sys.createdAt',
-//     });
-//     return response.items;
-//   } catch (error) {
-//     console.error('Error fetching quotes:', error);
-//     return [];
-//   }
-// }
