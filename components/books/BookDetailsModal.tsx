@@ -172,16 +172,6 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
               )}
             </div>
           </div>
-
-          {/* Footer */}
-          <div className="border-t border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100 px-12 py-8 flex justify-center">
-            <button
-              onClick={onClose}
-              className="px-10 py-4 text-slate-700 font-semibold hover:bg-white rounded-lg transition-all duration-200 hover:shadow-md"
-            >
-              Zamknij
-            </button>
-          </div>
         </div>
       </div>
     </>

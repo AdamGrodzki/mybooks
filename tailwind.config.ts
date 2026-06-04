@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Professional Modern Color System
+        // Premium Professional Color Palette
         primary: {
           50: '#F0F9FF',
           100: '#E0F2FE',
@@ -22,28 +22,28 @@ const config: Config = {
           900: '#0C3D66',
         },
         secondary: {
-          50: '#ECFDFD',
-          100: '#D9FAFB',
-          200: '#B3F2F6',
-          300: '#8CEEF0',
-          400: '#5BE9EA',
-          500: '#2DE3E4',
-          600: '#0891B2',
-          700: '#0E7490',
-          800: '#155E75',
-          900: '#164E63',
+          50: '#F0F4FF',
+          100: '#E0E7FF',
+          200: '#C7D2FE',
+          300: '#A5B4FC',
+          400: '#818CF8',
+          500: '#6366F1',
+          600: '#4F46E5',
+          700: '#4338CA',
+          800: '#3730A3',
+          900: '#312E81',
         },
         accent: {
-          50: '#FAF5FF',
-          100: '#F3E8FF',
-          200: '#E9D5FF',
-          300: '#D8B4FE',
-          400: '#C084FC',
-          500: '#A855F7',
-          600: '#9333EA',
-          700: '#7E22CE',
-          800: '#6B21A8',
-          900: '#581C87',
+          50: '#FDF2F8',
+          100: '#FCE7F3',
+          200: '#FBCFE8',
+          300: '#F8B4D6',
+          400: '#F472B6',
+          500: '#EC4899',
+          600: '#DB2777',
+          700: '#BE185D',
+          800: '#9D174D',
+          900: '#831843',
         },
         success: {
           50: '#F0FDF4',
@@ -81,10 +81,13 @@ const config: Config = {
         'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
         'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
         'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',
         'fade-in': 'fade-in 0.5s ease-in-out',
+        'slide-in': 'slide-in 0.4s ease-out',
+        'pulse-soft': 'pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         'float': {
@@ -95,6 +98,17 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'slide-in': {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'pulse-soft': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '.8' },
+        },
+      },
+      backdropBlur: {
+        'xl': '20px',
       },
     },
   },
