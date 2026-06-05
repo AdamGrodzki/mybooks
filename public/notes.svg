@@ -1,0 +1,67 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Notatki">
+  <defs>
+    <linearGradient id="cardGradient" x1="24" y1="22" x2="136" y2="138" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F1EEFF"/>
+    </linearGradient>
+
+    <linearGradient id="noteGradient" x1="44" y1="36" x2="116" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8F5FF"/>
+    </linearGradient>
+
+    <linearGradient id="accentGradient" x1="96" y1="40" x2="122" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <linearGradient id="penBadgeGradient" x1="96" y1="96" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4FA3"/>
+      <stop offset="1" stop-color="#F43F5E"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="11" y="12" width="138" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#7C3AED" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#cardShadow)">
+    <!-- Main card -->
+    <rect x="24" y="24" width="112" height="112" rx="28" fill="url(#cardGradient)"/>
+    <rect x="25.5" y="25.5" width="109" height="109" rx="26.5" stroke="#C4B5FD" stroke-width="3"/>
+
+    <!-- Note sheet -->
+    <rect x="43" y="38" width="74" height="86" rx="14" fill="url(#noteGradient)"/>
+    <rect x="44.5" y="39.5" width="71" height="83" rx="12.5" stroke="#DDD6FE" stroke-width="3"/>
+
+    <!-- Folded corner -->
+    <path d="M96 38H103C110.732 38 117 44.268 117 52V59L96 38Z" fill="url(#accentGradient)"/>
+    <path d="M96 38V55C96 57.209 97.791 59 100 59H117L96 38Z" fill="#EDE9FE"/>
+
+    <!-- Header dot -->
+    <circle cx="58" cy="58" r="5" fill="#8B5CF6"/>
+
+    <!-- Note lines -->
+    <rect x="68" y="54" width="32" height="7" rx="3.5" fill="#C4B5FD" opacity="0.9"/>
+    <rect x="56" y="74" width="46" height="7" rx="3.5" fill="#C4B5FD" opacity="0.75"/>
+    <rect x="56" y="88" width="36" height="7" rx="3.5" fill="#C4B5FD" opacity="0.65"/>
+    <rect x="56" y="102" width="28" height="7" rx="3.5" fill="#C4B5FD" opacity="0.55"/>
+
+    <!-- Pencil badge -->
+    <circle cx="112" cy="112" r="20" fill="url(#penBadgeGradient)"/>
+
+    <!-- Centered pencil -->
+    <g transform="translate(112 112) rotate(-45)">
+      <!-- eraser -->
+      <rect x="-2" y="-9" width="4" height="6" rx="1.5" fill="#FCE7F3"/>
+      <!-- metal band -->
+      <rect x="-2" y="-3" width="4" height="2" rx="1" fill="#F9A8D4"/>
+      <!-- body -->
+      <rect x="-2" y="-1" width="4" height="12" rx="2" fill="white"/>
+      <!-- tip wood -->
+      <path d="M-2 11H2L0 15L-2 11Z" fill="#FDE68A"/>
+      <!-- graphite -->
+      <path d="M-0.8 13.5H0.8L0 15L-0.8 13.5Z" fill="#A78BFA"/>
+    </g>
+  </g>
+</svg>

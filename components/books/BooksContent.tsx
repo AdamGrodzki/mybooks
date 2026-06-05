@@ -4,7 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { BookCard, Book } from './BookCard';
 import { BookDetailsModal } from './BookDetailsModal';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, ArrowBigLeft, ArrowBigDown, Ban } from 'lucide-react';
+import Image from 'next/image';
+import emptyBook from '../../public/emptyBook.svg';
+
 
 interface BooksContentProps {
   books: any[];
@@ -30,7 +33,7 @@ export function BooksContent({ books }: BooksContentProps) {
               href="/"
               className="px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-gradient-to-r from-gray-900 to-gray-800 text-white hover:from-gray-800 hover:to-gray-700 transition-all duration-300 font-black text-sm sm:text-base inline-flex items-center gap-2 group hover:scale-105 shadow-lg"
             >
-              <span className="group-hover:-translate-x-1 transition-transform text-lg">←</span>
+              <ArrowBigLeft className="group-hover:-translate-x-1 transition-transform text-lg" />
               <span>Wróć</span>
             </Link>
           </div>
@@ -40,7 +43,7 @@ export function BooksContent({ books }: BooksContentProps) {
       {/* Main Content - Flex Grow */}
       <main className="flex-1 flex flex-col">
         {/* Header with Stats */}
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12 pt-12 sm:pt-20 pb-8 sm:pb-16">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 pt-12 sm:pt-20 pb-8 sm:pb-1">
           <div className="mb-12 sm:mb-16 text-center">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-4 sm:mb-6 tracking-tighter drop-shadow-sm">
               Moja Biblioteka
@@ -78,8 +81,8 @@ export function BooksContent({ books }: BooksContentProps) {
         <div className="flex-1 flex flex-col">
           {books.length === 0 ? (
             <div className="flex-1 flex items-center justify-center px-4 sm:px-6">
-              <div className="py-16 sm:py-28 text-center max-w-lg mx-auto">
-                <div className="mb-6 sm:mb-8 text-6xl sm:text-7xl">📚</div>
+              <div className="py-16 sm:py-0 text-center max-w-lg mx-auto">
+                <div className="mb-6 sm:mb-8 text-9xl flex justify-center"><Image src={emptyBook} alt="Brak książek" /></div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-3 sm:mb-5 tracking-tight">
                   Brak książek
                 </h2>
@@ -90,7 +93,7 @@ export function BooksContent({ books }: BooksContentProps) {
                   href="/"
                   className="inline-flex items-center justify-center gap-3 px-12 sm:px-14 py-5 sm:py-6 rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 text-white font-black transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:scale-110 shadow-2xl text-lg sm:text-xl"
                 >
-                  <span className="text-xl">←</span>
+                  <ArrowBigLeft className="text-xl sm:text-2xl" />
                   Wróć do strony głównej
                 </Link>
               </div>
@@ -99,7 +102,8 @@ export function BooksContent({ books }: BooksContentProps) {
               <div className="container mx-auto px-6 sm:px-8 lg:px-12 pb-12 sm:pb-16">
               {/* Hint text */}
                 <p className="text-center text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 font-bold">
-                  ↓ Kliknij na książkę, aby zobaczyć szczegóły
+                  <ArrowBigDown className="inline-block mr-2" />
+                  Kliknij na książkę, aby zobaczyć szczegóły
               </p>
 
                 {/* Horizontal Scroll Container - Responsive */}

@@ -1,0 +1,28 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brak książek">
+    <defs>
+        <linearGradient id="bookA" x1="42" y1="44" x2="78" y2="112" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFFFFF"/>
+        <stop offset="1" stop-color="#E2E8F0"/>
+        </linearGradient>
+        <linearGradient id="bookB" x1="82" y1="44" x2="118" y2="112" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFFFFF"/>
+        <stop offset="1" stop-color="#E2E8F0"/>
+        </linearGradient>
+    </defs>
+
+    <path d="M80 48C73 42 64 39 55 39C44 39 36 45 36 55V111C36 114.314 38.686 117 42 117H77V57C77 53.348 78.181 50.305 80 48Z" fill="url(#bookA)" stroke="#94A3B8" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M80 48C87 42 96 39 105 39C116 39 124 45 124 55V111C124 114.314 121.314 117 118 117H83V57C83 53.348 81.819 50.305 80 48Z" fill="url(#bookB)" stroke="#94A3B8" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M80 49V117" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+
+    <path d="M47 58C51 56 56 55 61 55H69" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+    <path d="M47 73C52 71 57 70 63 70H69" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+    <path d="M47 88C52 86 57 85 63 85H67" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+
+    <path d="M113 58C109 56 104 55 99 55H91" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+    <path d="M113 73C108 71 103 70 97 70H91" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+    <path d="M113 88C108 86 103 85 97 85H93" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+
+    <circle cx="113" cy="105" r="20" fill="#FFFFFF" stroke="#6366F1" stroke-width="5"/>
+    <path d="M127 119L140 132" stroke="#6366F1" stroke-width="5" stroke-linecap="round"/>
+    <path d="M106 99L120 113M120 99L106 113" stroke="#A5B4FC" stroke-width="4" stroke-linecap="round"/>
+</svg>

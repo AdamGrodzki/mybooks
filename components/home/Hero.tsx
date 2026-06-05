@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { BookOpen } from 'lucide-react';
+import { ArrowBigRight } from 'lucide-react';
+import Image from 'next/image';
+import Books from '../../public/books.svg';
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-white">
+    <section className="min-h-screen-100 flex items-center justify-center bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-20 sm:py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 sm:mb-10 text-6xl sm:text-7xl md:text-8xl text-red-500"><BookOpen /></div>
-          
+          <div className="mb-8 sm:mb-10 text-6xl sm:text-7xl md:text-8xl text-red-500 flex justify-center"><Image src={Books} alt="Books" /></div>
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-black mb-8 sm:mb-10 leading-none tracking-tighter">
             MyBooks
           </h1>
@@ -27,7 +28,7 @@ export function Hero() {
             className="inline-flex items-center justify-center gap-3"
           >
             Przejdź do Kolekcji
-            <span className="text-xl sm:text-2xl">→</span>
+            <ArrowBigRight className="text-xl sm:text-2xl" />
           </Link>
         </div>
       </div>

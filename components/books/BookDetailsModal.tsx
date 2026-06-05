@@ -1,6 +1,10 @@
 'use client';
 
 import { Book } from './BookCard';
+import Image from 'next/image';
+import favQuotes from '../../public/favQuotes.png';
+import notesDesc from '../../public/notes.svg';
+import { X } from 'lucide-react';
 
 interface BookDetailsModalProps {
   book: Book | null;
@@ -71,9 +75,9 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 text-white/80 hover:text-white text-3xl transition-colors z-10"
+              className="absolute top-6 right-6 text-white/80 hover:text-white text-3xl transition-colors z-10 cursor-pointer"
             >
-              ✕
+              <X />
             </button>
 
             {/* Title & Author at Bottom of Banner */}
@@ -111,7 +115,7 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
               {notes && (
                 <div>
                   <div className="flex items-center gap-4 mb-8">
-                    <span className="text-4xl">📝</span>
+                    <span className="text-4xl"><Image src={notesDesc} width={48} height={48} alt="Notatki" /></span>
                     <h3 className="text-3xl font-serif font-bold text-slate-900">
                       Moje notatki
                     </h3>
@@ -128,7 +132,7 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
               {!notes && (
                 <div>
                   <div className="flex items-center gap-4 mb-8">
-                    <span className="text-4xl">📝</span>
+                    <span className="text-4xl"><Image src={notesDesc} width={48} height={48} alt="Notatki" /></span>
                     <h3 className="text-3xl font-serif font-bold text-slate-900">
                       Moje notatki
                     </h3>
@@ -143,7 +147,7 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
               {favouriteQuote && (
                 <div className="pt-6 border-t border-slate-200">
                   <div className="flex items-center gap-4 mb-8">
-                    <span className="text-4xl">💬</span>
+                    <span className="text-4xl"><Image src={favQuotes} width={48} height={48} alt="Ulubiony cytat" /></span>
                     <h3 className="text-3xl font-serif font-bold text-slate-900">
                       Ulubiony cytat
                     </h3>
@@ -160,7 +164,7 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
               {!favouriteQuote && (
                 <div className={notes ? 'pt-6 border-t border-slate-200' : ''}>
                   <div className="flex items-center gap-4 mb-8">
-                    <span className="text-4xl">💬</span>
+                    <span className="text-4xl"><Image src={favQuotes} width={48} height={48} alt="Ulubiony cytat" /></span>
                     <h3 className="text-3xl font-serif font-bold text-slate-900">
                       Ulubiony cytat
                     </h3>

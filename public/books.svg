@@ -1,0 +1,67 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stos książek">
+    <defs>
+        <linearGradient id="book1" x1="34" y1="112" x2="124" y2="112" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6366F1"/>
+        <stop offset="1" stop-color="#818CF8"/>
+        </linearGradient>
+        <linearGradient id="book2" x1="46" y1="92" x2="128" y2="92" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#14B8A6"/>
+        <stop offset="1" stop-color="#5EEAD4"/>
+        </linearGradient>
+        <linearGradient id="book3" x1="38" y1="72" x2="116" y2="72" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F59E0B"/>
+        <stop offset="1" stop-color="#FCD34D"/>
+        </linearGradient>
+        <linearGradient id="book4" x1="54" y1="50" x2="118" y2="50" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#EC4899"/>
+        <stop offset="1" stop-color="#F9A8D4"/>
+        </linearGradient>
+        <filter id="shadow" x="18" y="22" width="124" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.12"/>
+        </filter>
+    </defs>
+
+    <ellipse cx="80" cy="132" rx="44" ry="8" fill="#E2E8F0"/>
+
+    <g filter="url(#shadow)">
+        <!-- Bottom book -->
+        <g transform="rotate(-3 80 112)">
+        <rect x="30" y="100" width="96" height="20" rx="6" fill="url(#book1)"/>
+        <rect x="30" y="100" width="96" height="6" rx="6" fill="#FFFFFF" fill-opacity="0.18"/>
+        <rect x="38" y="104" width="60" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+        <rect x="38" y="110" width="40" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.28"/>
+        <rect x="114" y="100" width="12" height="20" rx="0 6 6 0" fill="#4338CA" fill-opacity="0.35"/>
+        </g>
+
+        <!-- Third book -->
+        <g transform="rotate(4 87 88)">
+        <rect x="44" y="78" width="86" height="18" rx="6" fill="url(#book2)"/>
+        <rect x="44" y="78" width="86" height="5" rx="6" fill="#FFFFFF" fill-opacity="0.18"/>
+        <rect x="52" y="82" width="44" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+        <rect x="52" y="88" width="30" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.25"/>
+        <rect x="118" y="78" width="12" height="18" rx="0 6 6 0" fill="#0F766E" fill-opacity="0.28"/>
+        </g>
+
+        <!-- Second book -->
+        <g transform="rotate(-5 76 68)">
+        <rect x="34" y="58" width="84" height="18" rx="6" fill="url(#book3)"/>
+        <rect x="34" y="58" width="84" height="5" rx="6" fill="#FFFFFF" fill-opacity="0.18"/>
+        <rect x="42" y="62" width="40" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+        <rect x="42" y="68" width="26" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.25"/>
+        <rect x="106" y="58" width="12" height="18" rx="0 6 6 0" fill="#B45309" fill-opacity="0.28"/>
+        </g>
+
+        <!-- Top book -->
+        <g transform="rotate(6 88 48)">
+        <rect x="52" y="40" width="68" height="16" rx="6" fill="url(#book4)"/>
+        <rect x="52" y="40" width="68" height="4" rx="6" fill="#FFFFFF" fill-opacity="0.18"/>
+        <rect x="60" y="44" width="28" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+        <rect x="108" y="40" width="12" height="16" rx="0 6 6 0" fill="#BE185D" fill-opacity="0.28"/>
+        </g>
+    </g>
+
+    <!-- Small decorative sparkles -->
+    <circle cx="40" cy="34" r="3" fill="#C7D2FE"/>
+    <circle cx="127" cy="62" r="2.5" fill="#99F6E4"/>
+    <path d="M125 30L127.4 35.6L133 38L127.4 40.4L125 46L122.6 40.4L117 38L122.6 35.6L125 30Z" fill="#FDE68A"/>
+</svg>
