@@ -10,7 +10,22 @@ export function Hero() {
     <section className="min-h-screen-100 flex items-center justify-center bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-20 sm:py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 sm:mb-10 text-6xl sm:text-7xl md:text-8xl text-red-500 flex justify-center"><Image src={Books} alt="Books" /></div>
+          <div className="mb-8 sm:mb-10 flex justify-center relative h-48 sm:h-56 md:h-64">
+            <div
+              className="absolute bottom-0 w-40 sm:w-48 h-2 bg-gray-900 rounded-full blur-xl opacity-40"
+              style={{
+                animation: 'shadow-pulse 4s ease-in-out infinite',
+              }}
+            />
+            <div
+              className="text-6xl sm:text-7xl md:text-8xl"
+              style={{
+                animation: 'float-book 4s ease-in-out infinite',
+              }}
+            >
+              <Image src={Books} alt="Books" />
+            </div>
+          </div>
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-black mb-8 sm:mb-10 leading-none tracking-tighter">
             MyBooks
           </h1>

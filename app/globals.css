@@ -154,6 +154,46 @@
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
 }
+/* Book Levitation Effect */
+@keyframes float-book {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotateZ(-2deg);
+  }
+
+  25% {
+    transform: translateY(-30px) rotateZ(-1deg);
+  }
+
+  50% {
+    transform: translateY(-40px) rotateZ(0deg);
+  }
+
+  75% {
+    transform: translateY(-30px) rotateZ(1deg);
+  }
+}
+
+@keyframes shadow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.float-book {
+  animation: float-book 4s ease-in-out infinite;
+}
+
+.shadow-pulse {
+  animation: shadow-pulse 4s ease-in-out infinite;
+}
 /* Enhanced Shadows */
 .shadow-3xl {
   box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.4);

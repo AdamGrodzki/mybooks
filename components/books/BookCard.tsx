@@ -61,13 +61,17 @@ export function BookCard({ book, onOpenDetails }: BookCardProps) {
   return (
     <button
       onClick={() => onOpenDetails(book)}
-      className="group relative flex-shrink-0 min-w-max w-56 h-80 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2"
+      className="group relative w-full h-80 sm:h-96 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-2"
       style={{
-        perspective: '1000px',
+        perspective: '1200px',
+        transformStyle: 'preserve-3d',
       }}
     >
-      {/* Book Shadow/3D Effect */}
-      <div className="absolute inset-0 rounded-xl shadow-2xl group-hover:shadow-2xl transition-shadow duration-300" />
+      {/* Strong Drop Shadow - 3D Book Effect */}
+      <div className="absolute -inset-1 rounded-xl shadow-2xl group-hover:shadow-2xl transition-shadow duration-300" />
+
+      {/* Book Top Edge (3D depth) */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-b from-white/20 to-transparent rounded-t-xl" />
 
       {/* Book Cover Background */}
       {coverImageUrl && !imageError ? (
@@ -82,20 +86,23 @@ export function BookCard({ book, onOpenDetails }: BookCardProps) {
       )}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-xl" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10 rounded-xl" />
 
-      {/* Book Spine Effect (optional 3D right edge) */}
-      <div className="absolute top-0 right-0 w-2 h-full bg-black/40 rounded-r-xl" />
+      {/* Book Spine/Right Edge (3D effect) */}
+      <div className="absolute top-0 right-0 w-3 h-full bg-gradient-to-r from-black/30 to-black/50 group-hover:from-black/40 group-hover:to-black/60 transition-all duration-300" />
+
+      {/* Book Bottom Edge (3D depth) */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-t from-black/40 to-transparent rounded-b-xl" />
 
       {/* Content - Bottom Section */}
       <div className="absolute inset-0 flex flex-col justify-end p-6 rounded-xl">
         {/* Title */}
-        <h3 className="font-bold text-xl line-clamp-2 mb-1 leading-tight font-serif !text-white drop-shadow-lg group-hover:translate-y-1 transition-transform">
+        <h3 className="font-bold text-lg sm:text-xl line-clamp-2 mb-2 leading-tight font-serif !text-white drop-shadow-lg group-hover:translate-y-1 transition-transform">
           {title}
         </h3>
 
         {/* Author */}
-        <p className="text-sm opacity-90 font-light !text-white drop-shadow-lg mb-3 group-hover:translate-y-1 transition-transform">
+        <p className="text-xs sm:text-sm opacity-90 font-light !text-white drop-shadow-lg mb-3 group-hover:translate-y-1 transition-transform">
           {author}
         </p>
 
@@ -105,7 +112,7 @@ export function BookCard({ book, onOpenDetails }: BookCardProps) {
             {[...Array(5)].map((_, i) => (
               <span
                 key={i}
-                className={`text-sm ${i < Math.floor(rating) ? 'text-yellow-300' : 'text-white/30'}`}
+                className={`text-xs sm:text-sm ${i < Math.floor(rating) ? 'text-yellow-300' : 'text-white/30'}`}
               >
                 ★
               </span>
@@ -114,8 +121,8 @@ export function BookCard({ book, onOpenDetails }: BookCardProps) {
         )}
       </div>
 
-      {/* Hover Shine Effect */}
-      <div className="absolute inset-0 rounded-xl bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
+      {/* Premium Shine/Gloss Effect */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/0 via-transparent to-white/0 group-hover:from-white/15 group-hover:via-transparent group-hover:to-white/5 transition-all duration-300" />
     </button>
   );
 }

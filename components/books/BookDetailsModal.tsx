@@ -82,7 +82,7 @@ export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
 
             {/* Title & Author at Bottom of Banner */}
             <div className="absolute bottom-0 left-0 right-0 p-10 text-white">
-              <h2 className="text-5xl font-serif font-bold mb-2 line-clamp-2 !text-white drop-shadow-lg">
+              <h2 className="text-5xl font-serif font-bold mb-3 !text-white drop-shadow-lg">
                 {title}
               </h2>
               <p className="text-lg opacity-95 !text-white drop-shadow-lg font-light">

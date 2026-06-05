@@ -15,7 +15,7 @@ interface BooksContentProps {
 
 export function BooksContent({ books }: BooksContentProps) {
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
-  const favoriteCount = Math.ceil(books.length * 0.4);
+  const favoriteCount = books.filter(book => book.fields.rating === 5).length;
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-white via-slate-50 to-slate-100 w-full">
@@ -43,7 +43,7 @@ export function BooksContent({ books }: BooksContentProps) {
       {/* Main Content - Flex Grow */}
       <main className="flex-1 flex flex-col">
         {/* Header with Stats */}
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12 pt-12 sm:pt-20 pb-8 sm:pb-1">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 pt-12 sm:pt-20 pb-0 sm:pb-1">
           <div className="mb-12 sm:mb-16 text-center">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-4 sm:mb-6 tracking-tighter drop-shadow-sm">
               Moja Biblioteka
@@ -55,7 +55,7 @@ export function BooksContent({ books }: BooksContentProps) {
 
           {/* Stats - Responsive Grid */}
           {books.length > 0 && (
-            <div className="flex flex-col sm:flex-row justify-center gap-10 sm:gap-20 mb-14 sm:mb-20">
+            <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-20 mb-10 sm:mb-20">
               <div className="text-center">
                 <div className="text-6xl sm:text-7xl md:text-8xl font-black text-gray-900 mb-3 sm:mb-4">
                   {books.length}
@@ -101,14 +101,12 @@ export function BooksContent({ books }: BooksContentProps) {
           ) : (
               <div className="container mx-auto px-6 sm:px-8 lg:px-12 pb-12 sm:pb-16">
               {/* Hint text */}
-                <p className="text-center text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 font-bold">
-                  <ArrowBigDown className="inline-block mr-2" />
+                <p className="text-center text-gray-700 text-base sm:text-lg mb-8 sm:mb-12 font-bold">
                   Kliknij na książkę, aby zobaczyć szczegóły
               </p>
 
-                {/* Horizontal Scroll Container - Responsive */}
-                <div className="overflow-x-auto pb-6 scroll-smooth -mx-6 sm:-mx-8 lg:-mx-12 px-6 sm:px-8 lg:px-12">
-                  <div className="flex gap-5 sm:gap-8">
+                {/* Responsive Grid Layout */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                     {books.map((book) => (
                       <BookCard
                         key={book.sys.id}
@@ -116,8 +114,7 @@ export function BooksContent({ books }: BooksContentProps) {
                         onOpenDetails={setSelectedBook}
                       />
                     ))}
-                  </div>
-              </div>
+                </div>
             </div>
           )}
         </div>

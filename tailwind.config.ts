@@ -88,11 +88,23 @@ const config: Config = {
         'fade-in': 'fade-in 0.5s ease-in-out',
         'slide-in': 'slide-in 0.4s ease-out',
         'pulse-soft': 'pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-book': 'float-book 4s ease-in-out infinite',
+        'shadow-pulse': 'shadow-pulse 4s ease-in-out infinite',
       },
       keyframes: {
         'float': {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-8px)' },
+        },
+        'float-book': {
+          '0%, 100%': { transform: 'translateY(0px) rotateZ(-2deg)' },
+          '25%': { transform: 'translateY(-30px) rotateZ(-1deg)' },
+          '50%': { transform: 'translateY(-40px) rotateZ(0deg)' },
+          '75%': { transform: 'translateY(-30px) rotateZ(1deg)' },
+        },
+        'shadow-pulse': {
+          '0%, 100%': { boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)' },
+          '50%': { boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)' },
         },
         'fade-in': {
           '0%': { opacity: '0' },
