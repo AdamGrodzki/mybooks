@@ -15,7 +15,7 @@ interface BooksContentProps {
 
 export function BooksContent({ books }: BooksContentProps) {
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
-  const favoriteCount = books.filter(book => book.fields.rating === 5).length;
+  const favoriteCount = books.filter(book => book.fields.favBook).length;
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-white via-slate-50 to-slate-100 w-full">

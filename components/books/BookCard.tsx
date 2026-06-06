@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Heart } from 'lucide-react';
 
 export interface Book {
   sys: { id: string };
@@ -13,6 +14,7 @@ export interface Book {
     bookCover?: any;
     notes?: string;
     favouriteQuote?: string;
+    favBook?: boolean;
   };
 }
 
@@ -50,7 +52,7 @@ function getBookCoverUrl(bookCover: any): string | null {
 
 export function BookCard({ book, onOpenDetails }: BookCardProps) {
   const [imageError, setImageError] = useState(false);
-  const { title, author, rating, bookCover } = book.fields;
+  const { title, author, rating, bookCover, favBook } = book.fields;
 
   // Use book ID to assign colors (fallback)
   const colorIndex = book.sys.id.charCodeAt(0) % colorPalette.length;
@@ -93,6 +95,13 @@ export function BookCard({ book, onOpenDetails }: BookCardProps) {
 
       {/* Book Bottom Edge (3D depth) */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-t from-black/40 to-transparent rounded-b-xl" />
+
+      {/* Favorite Heart Badge - Top Right */}
+      {favBook && (
+        <div className="absolute top-3 right-3 z-10 bg-red-500 rounded-full p-2 shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 border-2 border-white">
+          <Heart className="w-4 h-4 text-white fill-white" />
+        </div>
+      )}
 
       {/* Content - Bottom Section */}
       <div className="absolute inset-0 flex flex-col justify-end p-6 rounded-xl">

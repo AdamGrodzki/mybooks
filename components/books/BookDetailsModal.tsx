@@ -40,7 +40,7 @@ function getBookCoverUrl(bookCover: any): string | null {
 export function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
   if (!book) return null;
 
-  const { title, author, rating, notes, favouriteQuote, bookCover, dateRead } = book.fields as any;
+  const { title, author, rating, notes, favouriteQuote, bookCover, dateRead, favBook } = book.fields as any;
   const colorIndex = book.sys.id.charCodeAt(0) % colorPalette.length;
   const colors = colorPalette[colorIndex];
   const coverUrl = getBookCoverUrl(bookCover);
